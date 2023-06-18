@@ -1,0 +1,7 @@
+@import "../../scss/variables.scss";
+@import "../../scss/functions.scss";
+
+.header {
+  font-family: $poppins-font;
+  font-size: toRem(50);
+}
