@@ -1,0 +1,58 @@
+@import "../../scss/variables.scss";
+@import "../../scss/functions.scss";
+
+.container {
+  margin: toRem(36) toRem(20);
+
+  color: $color-very-dark-blue;
+  font-family: $poppins-font;
+  font-size: toRem(20);
+  font-weight: bold;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__menu {
+      color: $color-gray;
+    }
+  }
+
+  &__activeMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: toRem(350);
+    margin-top: toRem(20);
+    border-radius: toRem(10);
+    background-color: $color-dark-violet;
+
+    &__items {
+      padding: toRem(0);
+      height: 100%;
+      margin-bottom: 10px;
+      color: $color-white;
+      list-style-type: none;
+
+      hr {
+        border-top: toRem(1);
+        height: 0;
+        margin: toRem(30);
+        color: $color-gray;
+      }
+    }
+
+    &__item {
+      // height: toRem(50);
+      margin: toRem(20) toRem(30);
+    }
+
+    &__item:hover {
+      // margin: toRem(0) toRem(30);
+      background-color: $color-cyan;
+      border-radius: toRem(25);
+    }
+  }
+}
