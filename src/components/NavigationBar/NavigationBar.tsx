@@ -3,7 +3,7 @@ import style from "./NavigationBar.module.scss";
 import { ReactComponent as ShortlyLogo } from "../../images/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const Header: FC = (): JSX.Element => {
+const NavigationBar: FC = (): JSX.Element => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleOpenMenu = () => setOpenMenu(!openMenu);
@@ -13,7 +13,10 @@ const Header: FC = (): JSX.Element => {
       <section className={style.container__nav}>
         <ShortlyLogo />
         <div className={style.container__nav__menu}>
-          <GiHamburgerMenu size={35} onClick={handleOpenMenu} />
+          <button>
+            <GiHamburgerMenu size={35} onClick={handleOpenMenu} />
+            Troll
+          </button>
         </div>
       </section>
       <section>
@@ -34,4 +37,4 @@ const Header: FC = (): JSX.Element => {
   );
 };
 
-export default Header;
+export default NavigationBar;

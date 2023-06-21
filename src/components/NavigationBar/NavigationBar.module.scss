@@ -14,8 +14,10 @@
     justify-content: space-between;
     align-items: center;
 
-    &__menu {
+    &__menu button {
       color: $color-gray;
+      border: none;
+      background-color: $color-white;
     }
   }
 
@@ -48,12 +50,10 @@
     }
 
     &__item {
-      // height: toRem(50);
       margin: toRem(20) toRem(30);
     }
 
     &__item:hover {
-      // margin: toRem(0) toRem(30);
       background-color: $color-cyan;
       border-radius: toRem(25);
     }
