@@ -1,9 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 import style from "./PageHeader.module.scss";
 
 import { ReactComponent as IllustrationWorkingLogo } from "../../images/illustration-working.svg";
+import Button from "../partials/Button/Button";
 
-const PageHeader = () => {
+const PageHeader: FC = (): JSX.Element => {
   return (
     <section className={style.container}>
       <div className={style.container__logo}>
@@ -16,7 +17,7 @@ const PageHeader = () => {
           Building your brand's recognition and get detailed insight on how your
           links are preforming.
         </p>
-        <button>Hello</button>
+        <Button name="Get Started" />
       </div>
     </section>
   );

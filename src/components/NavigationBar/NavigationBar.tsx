@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import style from "./NavigationBar.module.scss";
 import { ReactComponent as ShortlyLogo } from "../../images/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const Header = () => {
+const Header: FC = (): JSX.Element => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleOpenMenu = () => setOpenMenu(!openMenu);

@@ -1,1 +1,3 @@
-export type WillBeUpdated = {};
+export type ButtonType = {
+  name: string;
+};
