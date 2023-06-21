@@ -1,0 +1,23 @@
+@import "../../scss/functions.scss";
+@import "../../scss/variables.scss";
+
+.container {
+  font-family: $poppins-font;
+
+  &__logo {
+    display: flex;
+    padding-left: toRem(20);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      font-size: toRem(45);
+      line-height: toRem(55);
+      margin-bottom: toRem(0);
+    }
+  }
+}

@@ -1,12 +1,14 @@
 import React from "react";
-import "./App.scss";
+import style from "./App.module.scss";
 import NavigationBar from "./NavigationBar/NavigationBar";
+import PageHeader from "./PageHeader/PageHeader";
 
 function App() {
   return (
-    <div className="App">
+    <main className={style.container}>
       <NavigationBar />
-    </div>
+      <PageHeader />
+    </main>
   );
 }
 

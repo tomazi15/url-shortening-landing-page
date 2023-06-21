@@ -24,7 +24,10 @@
     flex-direction: column;
     justify-content: center;
 
-    height: toRem(350);
+    position: absolute;
+    width: 89%;
+
+    height: toRem(500);
     margin-top: toRem(20);
     border-radius: toRem(10);
     background-color: $color-dark-violet;
