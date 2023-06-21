@@ -2,6 +2,11 @@
 @import "../../scss/variables.scss";
 
 .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
   font-family: $poppins-font;
 
   &__logo {
@@ -10,10 +15,6 @@
   }
 
   &__text {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
     h1 {
       font-size: toRem(45);
       line-height: toRem(55);

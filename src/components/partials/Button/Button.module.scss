@@ -1,3 +1,14 @@
+@import "../../../scss/functions.scss";
+@import "../../../scss/variables.scss";
+
 .button {
-  color: red;
+  width: 50%;
+  padding: toRem(13) toRem(0);
+
+  font-family: $poppins-font;
+  font-size: toRem(20);
+  background-color: $color-cyan;
+  color: $color-white;
+  border: none;
+  border-radius: toRem(25);
 }
