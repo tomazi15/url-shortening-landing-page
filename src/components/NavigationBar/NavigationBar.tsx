@@ -15,7 +15,6 @@ const NavigationBar: FC = (): JSX.Element => {
         <div className={style.container__nav__menu}>
           <button>
             <GiHamburgerMenu size={35} onClick={handleOpenMenu} />
-            Troll
           </button>
         </div>
       </section>

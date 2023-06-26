@@ -1,0 +1,33 @@
+@import "../../scss/variables.scss";
+@import "../../scss/functions.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  margin: toRem(88) toRem(20);
+  padding: toRem(24);
+
+  background-image: url("../../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: $color-dark-violet;
+  background-position: top right;
+
+  border-radius: toRem(12);
+
+  &__input {
+    font-family: $poppins-font;
+    font-size: toRem(16);
+    color: $color-gray;
+
+    padding: toRem(12);
+    margin-bottom: toRem(16);
+
+    border-radius: toRem(6);
+    border: none;
+  }
+
+  &__input::placeholder {
+    color: $color-gray;
+  }
+}

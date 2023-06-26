@@ -15,10 +15,17 @@
   }
 
   &__text {
+    margin: toRem(0) toRem(20);
+
     h1 {
       font-size: toRem(45);
       line-height: toRem(55);
       margin-bottom: toRem(0);
+    }
+    p {
+      font-size: toRem(17);
+      margin-bottom: toRem(32);
+      color: $color-gray;
     }
   }
 }
