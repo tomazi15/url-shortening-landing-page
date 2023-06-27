@@ -4,6 +4,7 @@ import NavigationBar from "./NavigationBar/NavigationBar";
 import PageHeader from "./PageHeader/PageHeader";
 import ShortenForm from "./ShortenForm/ShortenForm";
 import ProductCard from "./ProductCard/ProductCard";
+import BoostLinkPanel from "./BoostLinkPanel/BoostLinkPanel";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       </section>
       <section className={style.container__test}>
         <ProductCard />
+        <BoostLinkPanel />
       </section>
     </main>
   );
