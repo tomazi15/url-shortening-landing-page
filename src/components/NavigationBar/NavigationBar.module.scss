@@ -37,7 +37,7 @@
     &__items {
       padding: toRem(0);
       height: 100%;
-      margin-bottom: 10px;
+      margin-bottom: toRem(10);
       color: $color-white;
       list-style-type: none;
 
