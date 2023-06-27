@@ -1,0 +1,22 @@
+@import "../../scss/functions.scss";
+@import "../../scss/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  margin: toRem(100) toRem(20);
+
+  font-family: $poppins-font;
+
+  h1 {
+    margin-top: toRem(70);
+    font-size: toRem(25);
+  }
+
+  p {
+    margin-top: toRem(0);
+    color: $color-gray;
+  }
+}

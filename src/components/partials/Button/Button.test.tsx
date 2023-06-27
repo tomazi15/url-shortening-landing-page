@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import Button from "./Button";
-import { ButtonType } from "../../types";
+import { ButtonType } from "../../../types";
 
 describe("Button", () => {
   const buttonProps: ButtonType = {

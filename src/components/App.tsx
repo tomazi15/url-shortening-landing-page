@@ -3,13 +3,19 @@ import style from "./App.module.scss";
 import NavigationBar from "./NavigationBar/NavigationBar";
 import PageHeader from "./PageHeader/PageHeader";
 import ShortenForm from "./ShortenForm/ShortenForm";
+import ProductCard from "./ProductCard/ProductCard";
 
 function App() {
   return (
     <main className={style.container}>
-      <NavigationBar />
-      <PageHeader />
-      <ShortenForm />
+      <section>
+        <NavigationBar />
+        <PageHeader />
+        <ShortenForm />
+      </section>
+      <section className={style.container__test}>
+        <ProductCard />
+      </section>
     </main>
   );
 }

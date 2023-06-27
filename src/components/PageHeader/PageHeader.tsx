@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import style from "./PageHeader.module.scss";
 
 import { ReactComponent as IllustrationWorkingLogo } from "../../images/illustration-working.svg";
-import Button from "../Button/Button";
+import Button from "../partials/Button/Button";
 
 const PageHeader: FC = (): JSX.Element => {
   return (
