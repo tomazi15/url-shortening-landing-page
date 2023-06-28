@@ -10,7 +10,7 @@ import { footerData } from "../../data/footerData";
 const PageFooter = () => {
   return (
     <footer className={style.container}>
-      <ShortlyLogo fill="#ffff" className={style.test} />
+      <ShortlyLogo fill="#ffff" />
 
       <ul className={style.container__footerItems}>
         {footerData.map((menuItems: any) => {

@@ -36,4 +36,31 @@
     display: flex;
     gap: toRem(24);
   }
+
+  @media (min-width: $tablet-view) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+
+    padding: toRem(80) toRem(0);
+
+    &__footerItems {
+      display: flex;
+      flex-direction: row;
+      text-align: start;
+    }
+
+    &__footerItem {
+      padding: toRem(0) toRem(60);
+      // margin: toRem(5) toRem(0);
+      margin-top: toRem(0);
+      &__title {
+        margin-bottom: toRem(30);
+      }
+
+      &__item {
+        padding: toRem(3) toRem(0);
+      }
+    }
+  }
 }
