@@ -11,7 +11,7 @@ const NavigationBar: FC = (): JSX.Element => {
   return (
     <nav className={style.container}>
       <section className={style.container__nav}>
-        <ShortlyLogo />
+        <ShortlyLogo fill="#34313D" />
         <div className={style.container__nav__menu}>
           <button>
             <GiHamburgerMenu size={35} onClick={handleOpenMenu} />

@@ -1,0 +1,39 @@
+@import "../../scss/variables.scss";
+@import "../../scss/functions.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-top: toRem(110);
+  padding: toRem(55) toRem(0);
+  height: 110%;
+
+  font-family: $poppins-font;
+  background-color: $color-very-dark-violet;
+
+  &__footerItems {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__footerItem {
+    margin: toRem(30) toRem(0);
+    &__title {
+      color: $color-white;
+      margin-bottom: toRem(16);
+    }
+    &__item {
+      color: $color-gray;
+      font-weight: 400;
+      margin: toRem(8) toRem(0);
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: toRem(24);
+  }
+}

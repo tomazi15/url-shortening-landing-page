@@ -5,6 +5,7 @@ import PageHeader from "./PageHeader/PageHeader";
 import ShortenForm from "./ShortenForm/ShortenForm";
 import ProductCard from "./ProductCard/ProductCard";
 import BoostLinkPanel from "./BoostLinkPanel/BoostLinkPanel";
+import PageFooter from "./PageFooter/PageFooter";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <section className={style.container__test}>
         <ProductCard />
         <BoostLinkPanel />
+        <PageFooter />
       </section>
     </main>
   );
