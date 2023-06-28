@@ -6,7 +6,7 @@ import Button from "../partials/Button/Button";
 
 const PageHeader: FC = (): JSX.Element => {
   return (
-    <section className={style.container}>
+    <header className={style.container}>
       <div className={style.container__logo}>
         <IllustrationWorkingLogo />
       </div>
@@ -19,7 +19,7 @@ const PageHeader: FC = (): JSX.Element => {
         </p>
         <Button name="Get Started" />
       </div>
-    </section>
+    </header>
   );
 };
 

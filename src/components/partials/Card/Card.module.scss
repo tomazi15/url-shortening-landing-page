@@ -33,9 +33,9 @@
       align-items: center;
 
       position: absolute;
-      bottom: 84%;
-      width: 26%;
-      height: 30%;
+      bottom: 82%;
+      width: toRem(100);
+      height: toRem(100);
       background-color: $color-dark-violet;
       border-radius: 100%;
     }
