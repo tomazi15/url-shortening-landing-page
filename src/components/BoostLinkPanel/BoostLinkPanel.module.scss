@@ -17,4 +17,11 @@
 
   background-image: url("../../images/bg-boost-mobile.svg");
   background-color: $color-dark-violet;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-view) {
+    background-image: url("../../images/bg-boost-desktop.svg");
+    height: toRem(250);
+  }
 }

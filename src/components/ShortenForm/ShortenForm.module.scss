@@ -6,9 +6,11 @@
   flex-direction: column;
 
   margin: toRem(88) toRem(20);
+  padding: toRem(25);
 
   background-image: url("../../images/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
+  // background-size: cover;
   background-color: $color-dark-violet;
   background-position: top right;
 
@@ -38,6 +40,7 @@
 
     background-image: url("../../images/bg-shorten-desktop.svg");
     background-repeat: no-repeat;
+    background-size: cover;
     background-color: $color-dark-violet;
     background-position: top right;
 
