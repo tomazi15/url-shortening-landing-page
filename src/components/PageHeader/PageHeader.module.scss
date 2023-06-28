@@ -12,6 +12,7 @@
   &__logo {
     display: flex;
     padding-left: toRem(20);
+    // display: contents;
   }
 
   &__text {
@@ -26,6 +27,38 @@
       font-size: toRem(17);
       margin-bottom: toRem(32);
       color: $color-gray;
+    }
+  }
+
+  @media (min-width: $tablet-view) {
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: start;
+
+    margin-left: toRem(145);
+    // margin-right: toRem(145);
+
+    &__text {
+      margin-right: toRem(-300);
+
+      h1 {
+        width: 80%;
+        font-size: toRem(85);
+        line-height: toRem(100);
+      }
+
+      p {
+        width: 70%;
+        font-size: toRem(22);
+      }
+
+      button {
+        width: 20.4%;
+      }
+    }
+
+    &__logo {
+      display: contents;
     }
   }
 }
