@@ -19,4 +19,15 @@
     margin-top: toRem(0);
     color: $color-gray;
   }
+
+  @media (min-width: $tablet-view) {
+    justify-content: center;
+    align-items: center;
+
+    margin: toRem(130) toRem(20);
+
+    h1 {
+      // font-size: toRem(40);
+    }
+  }
 }

@@ -42,7 +42,7 @@
     justify-content: center;
     align-items: baseline;
 
-    padding: toRem(80) toRem(0);
+    padding: toRem(70) toRem(0);
 
     &__footerItems {
       display: flex;
@@ -52,7 +52,6 @@
 
     &__footerItem {
       padding: toRem(0) toRem(60);
-      // margin: toRem(5) toRem(0);
       margin-top: toRem(0);
       &__title {
         margin-bottom: toRem(30);

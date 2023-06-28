@@ -40,4 +40,38 @@
       border-radius: 100%;
     }
   }
+
+  @media (min-width: $tablet-view) {
+    display: flex;
+    width: toRem(1090);
+
+    &__card {
+      margin-right: toRem(30);
+      align-items: start;
+      text-align: start;
+
+      &:nth-child(1) {
+        margin-top: toRem(60);
+      }
+
+      &:nth-child(2) {
+        margin-top: toRem(100);
+      }
+
+      &:nth-child(3) {
+        margin-top: toRem(140);
+      }
+
+      &:not(:first-child)::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: -20%;
+        bottom: 0;
+        left: 20%;
+        border-left: toRem(8) solid $color-cyan;
+        transform: rotate(90deg);
+      }
+    }
+  }
 }
