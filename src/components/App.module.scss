@@ -13,4 +13,10 @@
 
     background-color: $color-light-gray;
   }
+
+  @media (min-width: $tablet-view) {
+    &__test {
+      top: 90%;
+    }
+  }
 }

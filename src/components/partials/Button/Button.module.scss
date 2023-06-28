@@ -2,23 +2,24 @@
 @import "../../../scss/variables.scss";
 
 .buttonRound {
-  width: 50%;
+  width: toRem(200);
   padding: toRem(13) toRem(0);
 
   font-family: $poppins-font;
   font-size: toRem(20);
+  font-weight: 500;
   background-color: $color-cyan;
   color: $color-white;
   border: none;
-  border-radius: toRem(25);
+  border-radius: toRem(50);
 }
 
 .buttonSquare {
-  width: 100%;
   padding: toRem(12) toRem(0);
 
   font-family: $poppins-font;
-  font-size: toRem(18);
+  font-size: toRem(20);
+  font-weight: 500;
   background-color: $color-cyan;
   color: $color-white;
   border: none;

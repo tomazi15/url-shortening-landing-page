@@ -6,7 +6,6 @@
   flex-direction: column;
 
   margin: toRem(88) toRem(20);
-  padding: toRem(24);
 
   background-image: url("../../images/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
@@ -20,7 +19,7 @@
     font-size: toRem(16);
     color: $color-gray;
 
-    padding: toRem(12);
+    padding: toRem(13);
     margin-bottom: toRem(16);
 
     border-radius: toRem(6);
@@ -29,5 +28,26 @@
 
   &__input::placeholder {
     color: $color-gray;
+  }
+
+  @media (min-width: $tablet-view) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: toRem(88) toRem(165);
+    padding: toRem(56);
+
+    background-image: url("../../images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: $color-dark-violet;
+    background-position: top right;
+
+    &__input {
+      margin: 0;
+      width: 74%;
+    }
+
+    button {
+      width: 19%;
+    }
   }
 }
