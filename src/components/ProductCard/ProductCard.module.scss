@@ -26,8 +26,14 @@
 
     margin: toRem(130) toRem(20);
 
-    h1 {
-      // font-size: toRem(40);
+    h1:nth-child(1) {
+      font-size: toRem(40);
+    }
+
+    p:nth-child(2) {
+      font-size: toRem(20);
+      width: 52%;
+      padding-bottom: toRem(20);
     }
   }
 }
