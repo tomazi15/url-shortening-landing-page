@@ -1,6 +1,6 @@
 import { CardDataType } from "../types";
 
-export const cardData = [
+export const cardData: CardDataType[] = [
   {
     id: 0,
     title: "Brand Recognition",

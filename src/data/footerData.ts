@@ -1,4 +1,6 @@
-export const footerData = [
+import { FooterDataType } from "../types";
+
+export const footerData: FooterDataType[] = [
   {
     name: "Features",
     list: ["Link Shortening", "Branded Links", "Analytics"],

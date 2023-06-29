@@ -2,8 +2,9 @@ import React, { FC } from "react";
 import svgLoader from "../../../utils/svgLoader";
 
 import style from "./Card.module.scss";
+import { CardDataTypeProps } from "../../../types";
 
-const Card: FC<any> = (cardData: any) => {
+const Card: FC<CardDataTypeProps> = ({ cardData }) => {
   return (
     <section className={style.container}>
       {cardData.map(

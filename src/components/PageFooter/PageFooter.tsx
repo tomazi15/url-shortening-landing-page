@@ -6,6 +6,7 @@ import { ReactComponent as PinterestIcon } from "../../images/icon-pinterest.svg
 import { ReactComponent as TwitterIcon } from "../../images/icon-twitter.svg";
 import { ReactComponent as FacebookIcon } from "../../images/icon-facebook.svg";
 import { footerData } from "../../data/footerData";
+import { FooterDataType } from "../../types";
 
 const PageFooter = (): JSX.Element => {
   return (
@@ -13,7 +14,7 @@ const PageFooter = (): JSX.Element => {
       <ShortlyLogo fill="#ffff" />
 
       <ul className={style.container__footerItems}>
-        {footerData.map((menuItems: { name: string; list: string[] }) => {
+        {footerData.map((menuItems: FooterDataType) => {
           return (
             <div className={style.container__footerItem}>
               <li className={style.container__footerItem__title}>
