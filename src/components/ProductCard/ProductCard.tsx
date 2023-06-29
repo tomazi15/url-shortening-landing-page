@@ -3,7 +3,7 @@ import style from "./ProductCard.module.scss";
 import Card from "../partials/Card/Card";
 import { cardData } from "../../data/cardData";
 
-const ProductCard = () => {
+const ProductCard = (): JSX.Element => {
   return (
     <section className={style.container}>
       <h1>Advanced Statistics</h1>
@@ -11,7 +11,7 @@ const ProductCard = () => {
         Track how your links are performing across the web with our advanced
         statistics dashboard.
       </p>
-      <Card data={cardData} />
+      <Card cardData={cardData} />
     </section>
   );
 };

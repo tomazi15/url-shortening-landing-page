@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React from "react";
 import style from "./PageHeader.module.scss";
 
 import { ReactComponent as IllustrationWorkingLogo } from "../../images/illustration-working.svg";
 import Button from "../partials/Button/Button";
 
-const PageHeader: FC = (): JSX.Element => {
+const PageHeader = (): JSX.Element => {
   return (
     <header className={style.container}>
       <div className={style.container__logo}>

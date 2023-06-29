@@ -7,7 +7,7 @@ import ProductCard from "./ProductCard/ProductCard";
 import BoostLinkPanel from "./BoostLinkPanel/BoostLinkPanel";
 import PageFooter from "./PageFooter/PageFooter";
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <main className={style.container}>
       <section>
@@ -22,6 +22,6 @@ function App() {
       </section>
     </main>
   );
-}
+};
 
 export default App;

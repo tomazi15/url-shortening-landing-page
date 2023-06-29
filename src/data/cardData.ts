@@ -1,3 +1,5 @@
+import { CardDataType } from "../types";
+
 export const cardData = [
   {
     id: 0,

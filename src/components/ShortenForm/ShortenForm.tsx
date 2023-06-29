@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../partials/Button/Button";
 import style from "./ShortenForm.module.scss";
 
-const ShortenForm = () => {
+const ShortenForm = (): JSX.Element => {
   return (
     <form className={style.container}>
       <input

@@ -3,7 +3,7 @@ import style from "./NavigationBar.module.scss";
 import { ReactComponent as ShortlyLogo } from "../../images/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const NavigationBar: FC = (): JSX.Element => {
+const NavigationBar = (): JSX.Element => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleOpenMenu = () => setOpenMenu(!openMenu);
