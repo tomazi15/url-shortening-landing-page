@@ -1,6 +1,7 @@
 export type ButtonType = {
   name: string;
-  type?: boolean;
+  isRound?: boolean;
+  onClick?: () => void;
 };
 
 export type CardDataType = {
@@ -16,4 +17,8 @@ export type CardDataTypeProps = {
 export type FooterDataType = {
   name: string;
   list: string[];
+};
+
+export type ShortenUrlFormType = {
+  shortenUrl: string;
 };

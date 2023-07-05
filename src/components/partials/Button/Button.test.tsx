@@ -5,7 +5,7 @@ import { ButtonType } from "../../../types";
 describe("Button", () => {
   const buttonProps: ButtonType = {
     name: "foo",
-    type: false,
+    isRound: false,
   };
 
   it("should render button name", () => {

@@ -14,9 +14,9 @@ const PageFooter = (): JSX.Element => {
       <ShortlyLogo fill="#ffff" />
 
       <ul className={style.container__footerItems}>
-        {footerData.map((menuItems: FooterDataType) => {
+        {footerData.map((menuItems: FooterDataType, index: number) => {
           return (
-            <div className={style.container__footerItem}>
+            <div key={index} className={style.container__footerItem}>
               <li className={style.container__footerItem__title}>
                 {menuItems.name}
               </li>
