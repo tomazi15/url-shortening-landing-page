@@ -4,13 +4,13 @@
 .container {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   margin: toRem(88) toRem(20);
   padding: toRem(25);
 
   background-image: url("../../images/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
-  // background-size: cover;
   background-color: $color-dark-violet;
   background-position: top right;
 
@@ -32,6 +32,14 @@
     color: $color-gray;
   }
 
+  &__errorText {
+    position: absolute;
+    top: toRem(5);
+    font-family: $poppins-font;
+    font-size: toRem(12);
+    color: $color-red;
+  }
+
   @media (min-width: $tablet-view) {
     flex-direction: row;
     justify-content: space-between;
@@ -47,6 +55,10 @@
     &__input {
       margin: 0;
       width: 74%;
+    }
+
+    &__errorText {
+      top: toRem(20);
     }
 
     button {
