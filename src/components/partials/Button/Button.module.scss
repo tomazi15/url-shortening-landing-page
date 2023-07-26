@@ -25,3 +25,16 @@
   border: none;
   border-radius: toRem(6);
 }
+
+.buttonSmallSquare {
+  padding: toRem(6) toRem(0);
+  width: toRem(105);
+
+  font-family: $poppins-font;
+  font-size: toRem(18);
+  font-weight: 500;
+  background-color: $color-cyan;
+  color: $color-white;
+  border: none;
+  border-radius: toRem(6);
+}

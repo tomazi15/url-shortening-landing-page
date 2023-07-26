@@ -16,7 +16,7 @@ const UrlList = () => {
             <li key={i} className={style.container__url}>
               {url.shortenUrl}
               <p>shorten url</p>
-              <Button name="Copy" buttonStyle="square" />
+              <Button name="Copy" buttonStyle="smallSquare" />
             </li>
           ))}
       </ul>

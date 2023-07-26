@@ -25,4 +25,10 @@
       color: $color-cyan;
     }
   }
+
+  @media (min-width: $tablet-view) {
+    &__urlList:has(&__url) {
+      margin-bottom: -82px;
+    }
+  }
 }
