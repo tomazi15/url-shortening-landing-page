@@ -14,9 +14,11 @@ const UrlList = () => {
         {urls.length > 0 &&
           urls.map((url: any, i: number) => (
             <li key={i} className={style.container__url}>
-              {url.shortenUrl}
               <p>shorten url</p>
-              <Button name="Copy" buttonStyle="smallSquare" />
+              <div className={style.container__urlDivider}>
+                {url.shortenUrl}
+                <Button name="Copy" buttonStyle="smallSquare" />
+              </div>
             </li>
           ))}
       </ul>

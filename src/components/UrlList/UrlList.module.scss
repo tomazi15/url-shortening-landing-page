@@ -9,7 +9,7 @@
 
   &__url {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     height: toRem(70);
@@ -20,15 +20,29 @@
     list-style: none;
     border-radius: toRem(12);
     background-color: $color-white;
+  }
 
-    p {
-      color: $color-cyan;
-    }
+  &__urlDivider {
+    color: $color-cyan;
   }
 
   @media (min-width: $tablet-view) {
+    &__url {
+      padding: toRem(0) toRem(25);
+    }
+
     &__urlList:has(&__url) {
       margin-bottom: -82px;
+    }
+
+    &__urlDivider {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      button {
+        margin: toRem(20) toRem(0) toRem(20) toRem(20);
+      }
     }
   }
 }
