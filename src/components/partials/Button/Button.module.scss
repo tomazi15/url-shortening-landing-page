@@ -12,6 +12,12 @@
   color: $color-white;
   border: none;
   border-radius: toRem(50);
+
+  cursor: pointer;
+
+  &:hover {
+    filter: saturate(50%);
+  }
 }
 
 .buttonSquare {
@@ -24,6 +30,12 @@
   color: $color-white;
   border: none;
   border-radius: toRem(6);
+
+  &:hover {
+    filter: saturate(50%);
+  }
+
+  cursor: pointer;
 }
 
 .buttonSmallSquare {
@@ -31,10 +43,16 @@
   width: toRem(105);
 
   font-family: $poppins-font;
-  font-size: toRem(18);
+  font-size: toRem(16);
   font-weight: 500;
   background-color: $color-cyan;
   color: $color-white;
   border: none;
   border-radius: toRem(6);
+
+  cursor: pointer;
+
+  &:hover {
+    filter: saturate(50%);
+  }
 }
