@@ -1,0 +1,28 @@
+@import "../../scss/variables.scss";
+@import "../../scss/functions.scss";
+
+.container {
+  &__urlList {
+    margin: toRem(120) toRem(165);
+    padding: 0;
+  }
+
+  &__url {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    height: toRem(70);
+    margin-bottom: toRem(16);
+
+    font-family: $poppins-font;
+    font-size: toRem(20);
+    list-style: none;
+    border-radius: toRem(12);
+    background-color: $color-white;
+
+    p {
+      color: $color-cyan;
+    }
+  }
+}

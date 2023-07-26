@@ -1,6 +1,6 @@
 export type ButtonType = {
   name: string;
-  isRound?: boolean;
+  buttonStyle: string;
   onClick?: () => void;
 };
 

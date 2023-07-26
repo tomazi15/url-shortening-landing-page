@@ -6,7 +6,7 @@ const BoostLinkPanel = (): JSX.Element => {
   return (
     <div className={style.container}>
       <h1>Boost your links today</h1>
-      <Button name="Get Started" />
+      <Button name="Get Started" buttonStyle="round" />
     </div>
   );
 };

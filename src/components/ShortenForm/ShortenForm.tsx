@@ -40,7 +40,7 @@ const ShortenForm = (): JSX.Element => {
           {errors.shortenUrl.message}
         </span>
       )}
-      <Button name="Shorten It!" isRound={true} />
+      <Button name="Shorten It!" buttonStyle="square" />
     </form>
   );
 };

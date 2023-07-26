@@ -17,7 +17,7 @@ const PageHeader = (): JSX.Element => {
           Building your brand's recognition and get detailed insight on how your
           links are preforming.
         </p>
-        <Button name="Get Started" />
+        <Button name="Get Started" buttonStyle="round" />
       </div>
     </header>
   );
