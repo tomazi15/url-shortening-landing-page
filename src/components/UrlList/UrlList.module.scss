@@ -7,17 +7,18 @@
 
   &__urlList {
     padding: 0;
-
-    background-color: $color-white;
-    border-radius: toRem(12);
-    font-family: $poppins-font;
-    list-style-type: none;
   }
 
   &__url {
     display: flex;
     flex-direction: column;
 
+    background-color: $color-white;
+    border-radius: toRem(12);
+    font-family: $poppins-font;
+    list-style-type: none;
+
+    margin-bottom: toRem(20);
     padding: toRem(20);
 
     p {
@@ -54,5 +55,32 @@
 
   // DESKTOP
   @media (min-width: $tablet-view) {
+    margin: toRem(120) toRem(165);
+
+    font-size: toRem(24);
+
+    &__url {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: toRem(18);
+
+      p {
+        margin-right: toRem(30);
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
+    &__urlDivider {
+      flex-direction: row;
+
+      button {
+        margin: 0;
+      }
+    }
   }
 }
