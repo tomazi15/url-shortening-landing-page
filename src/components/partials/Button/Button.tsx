@@ -8,6 +8,7 @@ const Button: FC<ButtonType> = ({ name, buttonStyle, onClick }) => {
       round: style.buttonRound,
       square: style.buttonSquare,
       smallSquare: style.buttonSmallSquare,
+      smallSquareCopied: style.buttonSmallSquareCopied,
     }[setButtonStyle]);
 
   return (

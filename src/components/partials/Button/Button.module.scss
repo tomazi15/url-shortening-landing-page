@@ -47,7 +47,29 @@
   background-color: $color-cyan;
   color: $color-white;
   border: none;
-  border-radius: toRem(6);
+  border-radius: toRem(8);
+
+  cursor: pointer;
+
+  &:hover {
+    filter: saturate(50%);
+  }
+
+  @media (min-width: $tablet-view) {
+    width: toRem(105);
+  }
+}
+
+.buttonSmallSquareCopied {
+  padding: toRem(6) toRem(0);
+
+  font-family: $poppins-font;
+  font-size: toRem(16);
+  font-weight: 500;
+  background-color: $color-dark-violet;
+  color: $color-white;
+  border: none;
+  border-radius: toRem(8);
 
   cursor: pointer;
 
