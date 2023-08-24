@@ -4,7 +4,7 @@
 .container {
   position: relative;
 
-  &__test {
+  &__section {
     position: absolute;
     height: auto;
     width: 100%;
@@ -15,7 +15,7 @@
   }
 
   @media (min-width: $tablet-view) {
-    &__test {
+    &__section {
       top: 90%;
     }
   }

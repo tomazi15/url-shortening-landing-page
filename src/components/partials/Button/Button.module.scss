@@ -40,7 +40,6 @@
 
 .buttonSmallSquare {
   padding: toRem(6) toRem(0);
-  width: toRem(105);
 
   font-family: $poppins-font;
   font-size: toRem(16);
@@ -54,5 +53,9 @@
 
   &:hover {
     filter: saturate(50%);
+  }
+
+  @media (min-width: $tablet-view) {
+    width: toRem(105);
   }
 }

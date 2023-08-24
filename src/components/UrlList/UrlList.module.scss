@@ -2,47 +2,57 @@
 @import "../../scss/functions.scss";
 
 .container {
+  // MOBILE
+  margin: toRem(100) toRem(20);
+
   &__urlList {
-    margin: toRem(120) toRem(165);
     padding: 0;
+
+    background-color: $color-white;
+    border-radius: toRem(12);
+    font-family: $poppins-font;
+    list-style-type: none;
   }
 
   &__url {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
 
-    height: toRem(70);
-    margin-bottom: toRem(16);
+    padding: toRem(20);
 
-    font-family: $poppins-font;
-    font-size: toRem(20);
-    list-style: none;
-    border-radius: toRem(12);
-    background-color: $color-white;
+    p {
+      margin: 0;
+    }
+
+    hr {
+      height: toRem(1);
+      width: 100%;
+      margin: toRem(12) toRem(0);
+
+      background-color: $color-gray;
+      border: none;
+    }
+  }
+
+  &__urlList:has(&__url) {
+    margin-bottom: -85px;
   }
 
   &__urlDivider {
-    color: $color-cyan;
+    display: flex;
+    flex-direction: column;
+
+    margin: padding(20);
+
+    p {
+      color: $color-cyan;
+    }
+    button {
+      margin-top: toRem(12);
+    }
   }
 
+  // DESKTOP
   @media (min-width: $tablet-view) {
-    &__url {
-      padding: toRem(0) toRem(25);
-    }
-
-    &__urlList:has(&__url) {
-      margin-bottom: -82px;
-    }
-
-    &__urlDivider {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-
-      button {
-        margin: toRem(20) toRem(0) toRem(20) toRem(20);
-      }
-    }
   }
 }

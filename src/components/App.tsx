@@ -16,7 +16,7 @@ const App = (): JSX.Element => {
         <PageHeader />
         <ShortenForm />
       </section>
-      <section className={style.container__test}>
+      <section className={style.container__section}>
         <UrlList />
         <ProductCard />
         <BoostLinkPanel />
