@@ -1,35 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./UrlList.module.scss";
-import { useAppSelector } from "../../redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
 import Button from "../partials/Button/Button";
+import { setCopiedAction } from "../../redux/features/form/formSlice";
 
 const UrlList = () => {
-  const [copied, setCopied] = useState(false);
+  const dispatch = useAppDispatch();
 
   const urls: any = useAppSelector((state: any) => state.urls.shortenUrl);
+  const copiedUrlId: any = useAppSelector((state: any) => state.urls.copied);
 
-  const handleOnCLick = () => setCopied(!copied);
-
-  console.log("copied", copied);
+  const handleOnCLick = (id: number) => {
+    return copiedUrlId !== id ? dispatch(setCopiedAction({ id })) : 0;
+  };
 
   return (
     <section className={style.container}>
       <ul className={style.container__urlList}>
         {urls.length > 0 &&
-          urls.map((url: any, i: number) => (
-            <li key={i} className={style.container__url}>
-              <p>original url</p>
-              <hr />
-              <div className={style.container__urlDivider}>
-                <p>{url.shortenUrl}</p>
-                <Button
-                  name={`${!copied ? "Copy" : "Copied!"}`}
-                  buttonStyle={!copied ? "smallSquare" : "smallSquareCopied"}
-                  onClick={handleOnCLick}
-                />
-              </div>
-            </li>
-          ))}
+          urls.map((url: any) => {
+            return (
+              <li key={urls.id} className={style.container__url}>
+                <p>original url</p>
+                <hr />
+                <div className={style.container__urlDivider}>
+                  <p>{url.shortenUrl}</p>
+                  <Button
+                    name={`${copiedUrlId === url.id ? "Copied!" : "Copy"}`}
+                    buttonStyle={
+                      copiedUrlId === url.id
+                        ? "smallSquareCopied"
+                        : "smallSquare"
+                    }
+                    onClick={() => handleOnCLick(url.id)}
+                  />
+                </div>
+              </li>
+            );
+          })}
       </ul>
     </section>
   );

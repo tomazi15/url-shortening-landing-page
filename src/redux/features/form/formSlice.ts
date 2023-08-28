@@ -1,16 +1,18 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, current, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../../store";
 
 export interface FormState {
   shortenUrl: Array<string>;
+  copied: number | null;
 }
 
 const initialState: FormState = {
   shortenUrl: [],
+  copied: null,
 };
 
 export const formSlice = createSlice({
-  name: "counter",
+  name: "urls",
   initialState,
   reducers: {
     addUrl: (state, { payload }: PayloadAction<string>) => {
@@ -19,12 +21,15 @@ export const formSlice = createSlice({
         shortenUrl: [...state.shortenUrl, payload],
       };
     },
+    setCopiedAction: (state, { payload }) => {
+      return { ...state, copied: payload.id };
+    },
   },
 });
 
 // State selectors
 export const selectCount = (state: RootState) => state.urls.shortenUrl;
 
-export const { addUrl } = formSlice.actions;
+export const { addUrl, setCopiedAction } = formSlice.actions;
 
 export default formSlice.reducer;

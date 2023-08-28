@@ -1,7 +1,7 @@
 export type ButtonType = {
   name: string;
   buttonStyle: string;
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 };
 
 export type CardDataType = {

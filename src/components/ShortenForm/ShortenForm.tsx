@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "../partials/Button/Button";
 import style from "./ShortenForm.module.scss";
 import { useForm } from "react-hook-form";
@@ -21,7 +21,7 @@ const ShortenForm = (): JSX.Element => {
   const dispatch = useAppDispatch();
 
   const submitUrlForm = (shortenUrl: any) => {
-    dispatch(addUrl(shortenUrl));
+    dispatch(addUrl({ ...shortenUrl, id: Math.round(Math.random() * 100) }));
     reset();
   };
 
