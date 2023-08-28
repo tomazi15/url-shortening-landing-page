@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import style from "./NavigationBar.module.scss";
 import { ReactComponent as ShortlyLogo } from "../../images/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Button from "../partials/Button/Button";
 
 const NavigationBar = (): JSX.Element => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -18,7 +19,18 @@ const NavigationBar = (): JSX.Element => {
           </button>
         </div>
       </section>
-      <section>
+      <section className={style.container__nav__desktop}>
+        <div className={style.container__nav__desktop__items}>
+          <p>Features</p>
+          <p>Pricing</p>
+          <p>Resources</p>
+        </div>
+        <div className={style.container__nav__desktop__actionItems}>
+          <p>Login</p>
+          <Button name="Sign Up" buttonStyle="round" />
+        </div>
+      </section>
+      <section className={style.container__nav__mobile}>
         {openMenu && (
           <div className={style.container__activeMenu}>
             <ul className={style.container__activeMenu__items}>

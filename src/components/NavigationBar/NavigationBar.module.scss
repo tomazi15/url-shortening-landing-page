@@ -19,6 +19,10 @@
       border: none;
       background-color: $color-white;
     }
+
+    &__desktop {
+      display: none;
+    }
   }
 
   &__activeMenu {
@@ -29,7 +33,7 @@
     position: absolute;
     width: 89%;
 
-    height: toRem(500);
+    height: toRem(350);
     margin-top: toRem(20);
     border-radius: toRem(10);
     background-color: $color-dark-violet;
@@ -50,12 +54,74 @@
     }
 
     &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       margin: toRem(20) toRem(30);
+      font-weight: 500;
     }
 
     &__item:hover {
       background-color: $color-cyan;
       border-radius: toRem(25);
+      height: toRem(50);
+    }
+  }
+
+  @media (min-width: $tablet-view) {
+    display: flex;
+    align-items: center;
+
+    margin: toRem(36) toRem(165);
+    &__nav {
+      &__menu button {
+        visibility: hidden;
+        width: 0;
+      }
+
+      &__mobile {
+        display: none;
+      }
+
+      &__desktop {
+        visibility: visible;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        font-size: toRem(16);
+        color: $color-grayish-violet;
+        font-weight: 500;
+        cursor: pointer;
+
+        &__items {
+          display: flex;
+          gap: toRem(35);
+          margin-left: toRem(30);
+        }
+
+        &__actionItems {
+          display: flex;
+          gap: toRem(35);
+          align-items: center;
+
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: toRem(100);
+            height: toRem(40);
+
+            font-size: toRem(16);
+          }
+        }
+
+        p:hover {
+          color: $color-very-dark-violet;
+        }
+      }
     }
   }
 }
