@@ -7,7 +7,7 @@ import { setCopiedAction } from "../../redux/features/form/formSlice";
 const UrlList = () => {
   const dispatch = useAppDispatch();
 
-  const urls: any = useAppSelector((state: any) => state.urls.shortenUrl);
+  const urls: any = useAppSelector((state: any) => state.urls.userUrl);
   const copiedUrlId: any = useAppSelector((state: any) => state.urls.copied);
 
   const handleOnCLick = (id: number) => {
@@ -21,10 +21,11 @@ const UrlList = () => {
           urls.map((url: any) => {
             return (
               <li key={urls.id} className={style.container__url}>
-                <p>original url</p>
+                <p>{url.userUrl}</p>
                 <hr />
                 <div className={style.container__urlDivider}>
-                  <p>{url.shortenUrl}</p>
+                  <p>Mock shorten url</p>
+                  {}
                   <Button
                     name={`${copiedUrlId === url.id ? "Copied!" : "Copy"}`}
                     buttonStyle={

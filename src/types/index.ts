@@ -19,6 +19,6 @@ export type FooterDataType = {
   list: string[];
 };
 
-export type ShortenUrlFormType = {
-  shortenUrl: string;
+export type UserUrlFormType = {
+  userUrl: string;
 };
