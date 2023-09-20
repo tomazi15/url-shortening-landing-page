@@ -29,10 +29,10 @@ const ShortenForm = (): JSX.Element => {
     <form className={style.container} onSubmit={handleSubmit(submitUrlForm)}>
       <input
         className={style.container__input}
-        // className={style.container__input}
         type="text"
         id="shorten"
         placeholder="Shorten a link here..."
+        aria-label="shorten url"
         {...register("userUrl")}
       />
       {errors.userUrl && (
