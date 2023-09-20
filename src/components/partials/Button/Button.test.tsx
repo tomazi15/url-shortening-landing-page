@@ -10,6 +10,7 @@ describe("Button", () => {
 
   it("should render button name", () => {
     render(<Button {...buttonProps} />);
+
     const buttonName = screen.getByText("foo");
     expect(buttonName.textContent).toEqual(buttonProps.name);
   });
