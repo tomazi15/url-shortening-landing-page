@@ -8,7 +8,7 @@ const PageHeader = (): JSX.Element => {
   return (
     <header className={style.container}>
       <div className={style.container__logo}>
-        <IllustrationWorkingLogo />
+        <IllustrationWorkingLogo aria-label="illustration working logo" />
       </div>
 
       <div className={style.container__text}>

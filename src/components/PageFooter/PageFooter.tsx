@@ -11,7 +11,7 @@ import { FooterDataType } from "../../types";
 const PageFooter = (): JSX.Element => {
   return (
     <footer className={style.container}>
-      <ShortlyLogo fill="#ffff" />
+      <ShortlyLogo fill="#ffff" aria-label="shortly footer logo" />
 
       <ul className={style.container__footerItems}>
         {footerData.map((menuItems: FooterDataType, index: number) => {
@@ -31,10 +31,10 @@ const PageFooter = (): JSX.Element => {
       </ul>
 
       <section className={style.container__icons}>
-        <FacebookIcon />
-        <TwitterIcon />
-        <PinterestIcon />
-        <InstagramIcon />
+        <FacebookIcon aria-label="facebook icon" />
+        <TwitterIcon aria-label="twitter icon" />
+        <PinterestIcon aria-label="pinterest icon" />
+        <InstagramIcon aria-label="instagram icon" />
       </section>
     </footer>
   );

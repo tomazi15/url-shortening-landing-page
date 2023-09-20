@@ -12,10 +12,14 @@ const NavigationBar = (): JSX.Element => {
   return (
     <nav className={style.container}>
       <section className={style.container__nav}>
-        <ShortlyLogo fill="#34313D" />
+        <ShortlyLogo fill="#34313D" aria-label="shortly header logo" />
         <div className={style.container__nav__menu}>
           <button>
-            <GiHamburgerMenu size={35} onClick={handleOpenMenu} />
+            <GiHamburgerMenu
+              size={35}
+              onClick={handleOpenMenu}
+              aria-label="burger menu icon"
+            />
           </button>
         </div>
       </section>

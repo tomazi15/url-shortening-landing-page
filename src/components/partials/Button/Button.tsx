@@ -14,6 +14,7 @@ const Button: FC<ButtonType> = ({ name, buttonStyle, onClick }) => {
   return (
     <button
       type="submit"
+      aria-label={name}
       className={buttonTypeStyle(buttonStyle)}
       onClick={onClick}
     >
