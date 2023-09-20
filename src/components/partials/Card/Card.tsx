@@ -12,7 +12,7 @@ const Card: FC<CardDataTypeProps> = ({ cardData }) => {
           return (
             <div key={data.id} className={style.container__card}>
               <div className={style.container__card__icon}>
-                {svgLoader(data.id)}
+                {svgLoader(data.id, data.title)}
               </div>
 
               <h1>{data.title}</h1>

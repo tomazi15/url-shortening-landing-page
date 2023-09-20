@@ -6,10 +6,10 @@ import { ReactComponent as CustomizableLogo } from "../images/icon-fully-customi
 
 const svgMap = [RecognitionLogo, RecordsLogo, CustomizableLogo];
 
-const svgLoader = (index: number) => {
+const svgLoader = (index: number, name: string) => {
   let Logo = svgMap[index];
 
-  return <Logo role="test" />;
+  return <Logo role="test" aria-label={name} />;
 };
 
 export default svgLoader;
