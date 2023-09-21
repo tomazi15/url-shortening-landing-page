@@ -5,9 +5,9 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Button from "../partials/Button/Button";
 
 const NavigationBar = (): JSX.Element => {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
 
-  const handleOpenMenu = () => setOpenMenu(!openMenu);
+  const handleOpenMenu = (): void => setOpenMenu(!openMenu);
 
   return (
     <nav className={style.container}>

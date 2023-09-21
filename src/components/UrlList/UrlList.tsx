@@ -7,8 +7,10 @@ import { setCopiedAction } from "../../redux/features/form/formSlice";
 const UrlList = () => {
   const dispatch = useAppDispatch();
 
-  const urls: any = useAppSelector((state: any) => state.urls.userUrl);
-  const copiedUrlId: any = useAppSelector((state: any) => state.urls.copied);
+  const urls: [{ userUrl: string; id: number }] = useAppSelector(
+    (state: any) => state.urls.userUrl
+  );
+  const copiedUrlId: number = useAppSelector((state: any) => state.urls.copied);
 
   const handleOnCLick = (id: number) => {
     return copiedUrlId !== id ? dispatch(setCopiedAction({ id })) : 0;
@@ -18,9 +20,9 @@ const UrlList = () => {
     <section className={style.container}>
       <ul className={style.container__urlList}>
         {urls.length > 0 &&
-          urls.map((url: any) => {
+          urls.map((url: { userUrl: string; id: number }) => {
             return (
-              <li key={urls.id} className={style.container__url}>
+              <li key={url.id} className={style.container__url}>
                 <p>{url.userUrl}</p>
                 <hr />
                 <div className={style.container__urlDivider}>

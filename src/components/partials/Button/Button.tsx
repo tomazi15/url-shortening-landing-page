@@ -3,7 +3,7 @@ import style from "./Button.module.scss";
 import { ButtonType } from "../../../types";
 
 const Button: FC<ButtonType> = ({ name, buttonStyle, onClick }) => {
-  const buttonTypeStyle = (setButtonStyle: string) =>
+  const buttonTypeStyle = (setButtonStyle: string): string =>
     ({
       round: style.buttonRound,
       square: style.buttonSquare,
