@@ -1,7 +1,6 @@
-import { act, fireEvent, screen, waitFor } from "@testing-library/react";
+import { fireEvent, screen, waitFor } from "@testing-library/react";
 import ShortenForm from "./ShortenForm";
 import { renderWithProviders } from "../../utils/test-utils.tsx";
-import userEvent from "@testing-library/user-event";
 
 describe("Shorten Form", () => {
   it("should contain input", () => {
