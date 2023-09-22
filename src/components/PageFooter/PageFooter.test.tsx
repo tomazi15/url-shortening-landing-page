@@ -24,7 +24,7 @@ describe("Page Footer", () => {
     [11, "Our Team", "Our Team"],
     [12, "Careers", "Careers"],
     [13, "Contact", "Contact"],
-  ])("menu item %i:  %s to equal %s", async (num, item, expected: any) => {
+  ])("menu item %i:  %s to equal %s", async (num, item, expected: string) => {
     render(<PageFooter />);
     expect(screen.getByText(item).textContent).toBe(expected);
   });

@@ -24,7 +24,7 @@ describe("Navigation Bar", () => {
     [3, "Resources", "Resources"],
     [4, "Login", "Login"],
     [5, "Sign Up", "Sign Up"],
-  ])("menu item %i:  %s to equal %s", async (num, item, expected: any) => {
+  ])("menu item %i:  %s to equal %s", async (num, item, expected: string) => {
     render(<NavigationBar />);
     expect(screen.getByText(item).textContent).toBe(expected);
 
