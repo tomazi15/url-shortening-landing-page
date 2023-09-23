@@ -20,7 +20,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
-          path: packet.json
+          path: ./build
 
   unit-tests:
     needs: build
