@@ -1,4 +1,4 @@
-name: Url Shortening Landing Pahe Deploy
+name: Url Shortening Landing Page Deploy
 
 on:
   push:
@@ -7,11 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
@@ -20,9 +16,19 @@ jobs:
       - name: Install and build
         run: npm install && npm run build
 
-      - name: Run Tests
-        run: npm run test -- --watchAll --coverage
+  unit-tests:
+    needs: build
+    runs-on: self-hosted
 
+    steps:
+      - name: Run Tests
+        run: npm run test:watch
+
+  deploy:
+    needs: unit-tests
+    runs-on: self-hosted
+
+    steps:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
