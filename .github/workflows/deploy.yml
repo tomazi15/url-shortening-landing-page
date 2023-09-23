@@ -16,19 +16,41 @@ jobs:
       - name: Install and build
         run: npm install && npm run build
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: build
+
   unit-tests:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+
       - name: Run Tests
         run: npm run test:watch
+
+      - name: Upload test artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-artifact
+          path: build
 
   deploy:
     needs: unit-tests
     runs-on: ubuntu-latest
 
     steps:
+      - name: Download test artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: test-artifact
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
