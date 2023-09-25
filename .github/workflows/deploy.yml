@@ -44,4 +44,4 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build-artifact
+          folder: /home/runner/work/url-shortening-landing-page/url-shortening-landing-page
