@@ -12,7 +12,7 @@ const PageHeader = (): JSX.Element => {
       </div>
 
       <div className={style.container__text}>
-        <h1>More than just shorter links</h1>
+        <h1>TEST than just shorter links</h1>
         <p>
           Building your brand's recognition and get detailed insight on how your
           links are preforming.

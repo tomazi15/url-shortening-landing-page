@@ -1,0 +1,68 @@
+@import "../../scss/variables.scss";
+@import "../../scss/functions.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  margin: toRem(88) toRem(20);
+  padding: toRem(25);
+
+  background-image: url("../../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: $color-dark-violet;
+  background-position: top right;
+
+  border-radius: toRem(12);
+
+  &__input {
+    font-family: $poppins-font;
+    font-size: toRem(16);
+    color: $color-gray;
+
+    padding: toRem(13);
+    margin-bottom: toRem(16);
+
+    border-radius: toRem(6);
+    border: none;
+  }
+
+  &__input::placeholder {
+    color: $color-gray;
+  }
+
+  &__errorText {
+    position: absolute;
+    top: toRem(5);
+    font-family: $poppins-font;
+    font-size: toRem(12);
+    color: $color-red;
+  }
+
+  @media (min-width: $tablet-view) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: toRem(88) toRem(165);
+    padding: toRem(56);
+
+    background-image: url("../../images/bg-shorten-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: $color-dark-violet;
+    background-position: top right;
+
+    &__input {
+      margin: 0;
+      width: 74%;
+    }
+
+    &__errorText {
+      top: toRem(20);
+    }
+
+    button {
+      width: 19%;
+    }
+  }
+}
