@@ -19,45 +19,23 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-      # - name: Download build artifact
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: build-artifact
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: build
 
-      - name: List items
-        run: ls && pwd
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
 
-      - name: List build folder
-        run: cd build && ls
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./build
-
-      # - name: Upload build artifact
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: build-artifact
-      #     path: build
-
-  # deploy:
-  #   needs: build
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #     # - name: Checkout
-  #     #   uses: actions/checkout@v3
-
-  #     - name: Download build artifact
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: build-artifact
-
-  #     - name: List items
-  #       run: ls && pwd
-
-  #     - name: Deploy
-  #       uses: JamesIves/github-pages-deploy-action@v4
-  #       with:
-  #         folder: /home/runner/work/url-shortening-landing-page/url-shortening-landing-page
+          folder: ./
