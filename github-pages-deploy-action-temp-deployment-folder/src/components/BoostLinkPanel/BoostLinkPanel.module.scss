@@ -1,0 +1,27 @@
+@import "../../scss/functions.scss";
+@import "../../scss/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: toRem(300);
+  margin: toRem(-110) toRem(0);
+
+  font-family: $poppins-font;
+  font-size: toRem(18);
+  font-weight: 400;
+  color: $color-white;
+
+  background-image: url("../../images/bg-boost-mobile.svg");
+  background-color: $color-dark-violet;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $tablet-view) {
+    background-image: url("../../images/bg-boost-desktop.svg");
+    height: toRem(250);
+  }
+}
