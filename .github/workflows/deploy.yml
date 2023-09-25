@@ -16,30 +16,17 @@ jobs:
       - name: Install and build
         run: npm install && npm run build
 
+      - name: Run Tests
+        run: npm run test
+
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
           name: build-artifact
-          path: |
-            build
-            package.json
-            package-lock.json
-
-  unit-tests:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
-
-      - name: Run Tests
-        run: npm run test
+          path: build
 
   deploy:
-    needs: unit-tests
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
