@@ -33,13 +33,13 @@ jobs:
       contents: write
 
     steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - name: Download build artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
+      # - name: Download build artifact
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: build-artifact
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
