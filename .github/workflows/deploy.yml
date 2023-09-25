@@ -33,10 +33,10 @@ jobs:
       # - name: Checkout
       #   uses: actions/checkout@v3
 
-      # - name: Download build artifact
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: build-artifact
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
 
       - name: List items
         run: ls && pwd
