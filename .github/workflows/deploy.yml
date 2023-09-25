@@ -39,7 +39,7 @@ jobs:
           name: build-artifact
 
       - name: List items
-        run: ls -la
+        run: ls && pwd
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
