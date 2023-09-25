@@ -1,0 +1,22 @@
+@import "../scss/functions.scss";
+@import "../scss/variables.scss";
+
+.container {
+  position: relative;
+
+  &__section {
+    position: absolute;
+    height: auto;
+    width: 100%;
+    top: 93%;
+    z-index: -1;
+
+    background-color: $color-light-gray;
+  }
+
+  @media (min-width: $tablet-view) {
+    &__section {
+      top: 90%;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import "../../scss/functions.scss";
+@import "../../scss/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  font-family: $poppins-font;
+
+  &__logo {
+    display: flex;
+    padding-left: toRem(20);
+    // display: contents;
+  }
+
+  &__text {
+    margin: toRem(0) toRem(20);
+
+    h1 {
+      font-size: toRem(45);
+      line-height: toRem(55);
+      margin-bottom: toRem(0);
+    }
+    p {
+      font-size: toRem(17);
+      margin-bottom: toRem(32);
+      color: $color-gray;
+    }
+  }
+
+  @media (min-width: $tablet-view) {
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: start;
+
+    margin-left: toRem(145);
+
+    &__text {
+      margin-right: toRem(-300);
+
+      h1 {
+        width: 80%;
+        font-size: toRem(85);
+        line-height: toRem(100);
+      }
+
+      p {
+        width: 70%;
+        font-size: toRem(22);
+      }
+
+      button {
+        width: 20.4%;
+      }
+    }
+
+    &__logo {
+      display: contents;
+    }
+  }
+}
