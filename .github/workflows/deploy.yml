@@ -27,10 +27,13 @@ jobs:
       - name: List items
         run: ls && pwd
 
+      - name: List build folder
+        run: cd build && ls
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: /home/runner/work/url-shortening-landing-page/url-shortening-landing-page
+          folder: ./build
 
       # - name: Upload build artifact
       #   uses: actions/upload-artifact@v3
