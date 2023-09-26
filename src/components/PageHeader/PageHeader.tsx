@@ -13,6 +13,7 @@ const PageHeader = (): JSX.Element => {
 
       <div className={style.container__text}>
         <h1>More than just shorter links</h1>
+
         <p>
           Building your brand's recognition and get detailed insight on how your
           links are preforming.
