@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import PageFooter from "../components/PageFooter/PageFooter";
+import ProductCard from "../components/ProductCard/ProductCard";
 
-const meta: Meta<typeof PageFooter> = {
-  title: "All Components/ Page Footer",
-  component: PageFooter,
+const meta: Meta<typeof ProductCard> = {
+  title: "All Components/ Product Card",
+  component: ProductCard,
   tags: ["autodocs"],
 };
 

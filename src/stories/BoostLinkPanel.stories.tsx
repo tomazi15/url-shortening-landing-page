@@ -4,9 +4,7 @@ import BoostLinkPanel from "../components/BoostLinkPanel/BoostLinkPanel";
 const meta: Meta<typeof BoostLinkPanel> = {
   title: "All Components/Boost Link Panel",
   component: BoostLinkPanel,
-  parameters: {
-    layout: "centered",
-  },
+  decorators: [(story) => <div style={{ paddingTop: "7rem" }}>{story()}</div>],
   tags: ["autodocs"],
 };
 

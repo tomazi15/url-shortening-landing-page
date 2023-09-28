@@ -2,11 +2,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import NavigationBar from "../components/NavigationBar/NavigationBar";
 
 const meta: Meta<typeof NavigationBar> = {
-  title: "All Components/Navigation Bar",
+  title: "All Components/ Navigation Bar",
   component: NavigationBar,
-  parameters: {
-    layout: "centered",
-  },
   tags: ["autodocs"],
 };
 

@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 import PageHeader from "../components/PageHeader/PageHeader";
 
 const meta: Meta<typeof PageHeader> = {
-  title: "All Components/Page Header",
+  title: "All Components/ Page Header",
   component: PageHeader,
   parameters: {
-    layout: "centered",
+    backgrounds: { default: "dark" },
   },
   tags: ["autodocs"],
 };
